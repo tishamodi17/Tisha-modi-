@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><fieldset>
+	
+	<legend>Registration form </legend>
+	<form action="" method="post" enctype="multipart/form-data">
+		First Name:<input type="text" name="firstname" required>
+		<br>
+		Last name:<input type="text" name="lastname" value="tisha">
+		<br>
+		user name:<input type="text" name="username" size="30">
+		<br>
+		email:<input type="email" name="email">
+		<br>
+		password:<input type="password" name="pass">
+		<br>
+		date:<input type="date" name="dob">
+		<br>
+		time:<input type="time" name="time">
+		<br>
+		color:<input type="color" name="color">
+		<br>
+		upload file/image"<input type="file" name="file">
+		<br>
+		<br>
+		date/time:<input type="datetime-local" name="datetime-local">
+		<br>
+		gender :
+		Male : <input type="radio" name="gender" value="male">
+		Female : <input type="radio" name="gender" value="female">
+
+		<br>
+		<br>
+		laug :
+		<br>
+		Hindi :<input type="checkbox" name="lag[]" value="hindi">
+		English : <input type="checkbox" name="lag[]" value="english">
+		Gujarati : <input type="checkbox" name="lag[]" value="gujarati">
+		<br>
+		<br>
+		Month : <input type="month" name="month">
+		<br>
+		mobile:<input type="number" name="number">
+		<br>
+		week:<input type="week" name="week">
+		<br>
+		country:
+		<select name="country">
+			<option value="">-----select country------</option>
+			<option value="India">India</option>
+			<option value="USA">USA</option>
+			<option value="Japan">Japan</option>
+			<option value="UK">UK</option>
+			<option value="China">China</option>
+		</select>
+		<br>
+		Address:<textarea name="address" cols="30" rows="5"></textarea>
+		<br>
+		Hidden:<input type="hiidden" name="religion" value="India">
+		<br>
+		<br>
+		Image:<input type="image" name="image">
+		<br>
+		Quantity (between 1 and 5):
+		<input type="number" name="quantity" min="1" max="5"><br><br>
+		Minlength 
+		<input type="password" name="password" minlength="8">
+		Maxlength 
+		<input type="password" name="password" maxlength="8">
+		<br>
+		<br>
+		email :@
+		<input type="email" name="email"><br><br>
+		pattern a-z<br>
+		<input type="text" name="only_alpha" pattern="[a-zA-Z]+" title="add only alphabeticaly">
+		<br>
+		<br>
+		pattern a-z with minlength max length<br>
+		<input type="text" name="only_alpha" pattern="[a-zA-Z]{3,8}" title="add only alphabeticaly">
+		<br>
+		<br>
+		number<br>
+		<input type="text" name="only_number" pattern="[0-9]{10,11}" title="add only add mobile number">
+		<br>
+		<br>
+		<input type="submit" name="submit" value="Regiester">
+		<input type="button" name="submit" value="submit">
+		<input type="reset" name="reset">
+
+	</form>
+</fieldset>
+<br>
+
+
+</head>
+</html>
