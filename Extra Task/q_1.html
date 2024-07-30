@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            margin: 80;
+        }
+        .form-container {
+            background-color: #b3d892;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="number"],
+        .form-container textarea,
+        .form-container select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-container .card-type label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>PHP Assignment</h2>
+        <form action="#" method="post">
+            <div>
+                <h3>Step 1 :
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="First and last name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Eg. +447500000000" required>
+            </div>
+
+            <div>
+                <h3>Step 2: Delivery address</h3>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" placeholder="Your address" required></textarea>
+
+                <label for="postcode">Post code:</label>
+                <input type="text" id="postcode" name="postcode" required>
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+
+            <div>
+                <h3>Step 3: Card details</h3>
+                <label for="card-type">Card type:</label>
+                <div class="card-type">
+                    <label><input type="radio" name="card-type" value="visa" required> VISA</label>
+                    <label><input type="radio" name="card-type" value="amex"> AmEx</label>
+                    <label><input type="radio" name="card-type" value="mastercard"> Mastercard</label>
+                </div>
+
+                <label for="card-number">Card number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="security-code">Security code:</label>
+                <input type="text" id="security-code" name="security-code" required>
+
+                <label for="name-on-card">Name on card:</label>
+                <input type="text" id="name-on-card" name="name-on-card" required>
+            </div>
+
+            <button type="submit">BUY IT!</button>
+        </form>
+    </div>
+</body>
+</html>

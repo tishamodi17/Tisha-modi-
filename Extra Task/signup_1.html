@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0"><fieldset>
+	<legend><h1>SIGNUP FORM</h1></legend>
+</head>
+<body>
+	<form action="#" method="post" enctype="multiple/form-data">
+		<div>
+			<label for="firstname">First,Last Name:</label>
+			<input type="text" id="firstname" name="firstname" required>
+			<input type="text" name="lastname" required>
+		</div>
+		<br>
+		<div>
+			<label for="organization" >Organization :</label>
+			<input type="text" name="organization" required>
+		</div>
+		<br>
+		<div>
+			<label for="email">Email address :</label>
+
+		<input type="email" name="email"><br><br>
+		</div>
+		<br>
+		<div>
+			<label for="workphone">Work phone:</label>
+			<input type="number" name="only-number" pattern="{10,11}" required>
+			
+		</div>
+		<br>
+		<div>
+			<label for="homephone">Home Phone :</label>
+			<input type="number" name="only-number"  required>
+		</div>
+		<br>
+		<div>
+			<label for="address">Address :</label>
+			<textarea name="address" cols="30" rows="4" required></textarea>
+			</div>
+		<br>
+			<div>
+				<label for="country">Country :</label>
+				<select id="country" name="country" required>
+					<option value="disable selected">-----country------</option>
+					<option value="INDIA">INDIA</option>
+					<option value="USA">USA</option>
+					<option value="LONDON">LONDON</option>
+					<option value="CANEDA">CANEDA</option>
+					
+				</select>
+			</div>
+			<br>
+			<div>
+				<label for="city">City :</label>
+				<select id="city" name="city" required>
+					<option value="disable selected">-----city------</option>
+					<option value="AHEMDABAD">AHEMDABAD</option>
+					<option value="AGRA">AGRA</option>
+					<option value="MUMBAI">MUMBAI</option>
+					<option value="KOLKATA">KOLKATA</option>
+					</select>
+				</div>
+				<br>
+				<div>
+					<input type="SUBMIT" value="SUBMIT">
+				</div>
+				<br>
+				<p>* - required fields</p>
+			</form>
+		</body>
+	</fieldset>
+</head>
+</html>
+
