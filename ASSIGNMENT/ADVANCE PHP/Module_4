@@ -1,0 +1,160 @@
+1. What Is Object-Oriented Programming?
+
+    Object-Oriented Programming (OOP) organizes code around objects, which represent real-world entities.
+    It uses classes (blueprints) and objects (instances of classes) to encapsulate data (properties) and behavior (methods).
+    Core principles include encapsulation, inheritance, polymorphism, and abstraction.
+
+2. What Are Properties of Object-Oriented Systems?
+
+    Encapsulation: Restrict access to certain details of an object and expose only the necessary parts.
+    Inheritance: Allows a class to inherit properties and methods from another class.
+    Polymorphism: Enables a single interface to represent different types.
+    Abstraction: Hides implementation details and focuses on essential features.
+
+3. What Is the Difference Between Class and Interface?
+Class	Interface
+Contains properties and methods.	Only declares methods (no implementation).
+Supports inheritance from one parent class.	Allows multiple implementations in a class.
+Can contain both abstract and concrete methods.	Contains only method declarations.
+4. What Is Overloading?
+
+    Overloading in PHP refers to dynamically handling properties or methods that are not declared in a class.
+    Achieved using magic methods like:
+        __get()
+        __set()
+        __call()
+        __callStatic()
+
+5. What Is T_PAAMAYIM_NEKUDOTAYIM (Scope Resolution Operator ::)?
+
+    Used to:
+        Access static methods or properties.
+        Access class constants.
+        Call a parent class’s method.
+
+Example:
+
+class Demo {
+    const MY_CONST = "Hello";
+    public static function staticMethod() {
+        echo "Static Method";
+    }
+}
+
+echo Demo::MY_CONST; // Output: Hello
+Demo::staticMethod(); // Output: Static Method
+
+6. Differences Between Abstract Classes and Interfaces
+Abstract Class	Interface
+Can have properties and methods with implementation.	Contains only method declarations.
+A class can extend only one abstract class.	A class can implement multiple interfaces.
+Can have a constructor.	Cannot have a constructor.
+7. Define Constructor and Destructor
+
+    Constructor (__construct): Special method called when an object is created.
+    Destructor (__destruct): Special method called when an object is destroyed.
+
+Example:
+
+class Demo {
+    public function __construct() {
+        echo "Object Created";
+    }
+
+    public function __destruct() {
+        echo "Object Destroyed";
+    }
+}
+
+8. How to Load Classes in PHP?
+
+    Using require or include for manual inclusion.
+    Using spl_autoload_register() for dynamic loading:
+
+    spl_autoload_register(function ($className) {
+        include $className . '.php';
+    });
+
+9. How to Call Parent Constructor?
+
+Use parent::__construct() in the child class.
+10. Are Parent Constructors Called Implicitly?
+
+    Yes, if the child class does not have its own constructor.
+    No, if the child class has a constructor; parent::__construct() must be explicitly called.
+
+11. What Happens If Constructor Is Private or Protected?
+
+    Private Constructor: Prevents direct instantiation of the class (useful for Singleton pattern).
+    Protected Constructor: Allows instantiation only by subclasses.
+
+12. PHP Magic Methods/Functions
+
+Magic methods in PHP start with __. Examples include:
+
+    __construct(), __destruct()
+    __get(), __set(), __call(), __callStatic()
+    __toString(), __invoke()
+
+Example for Static Keyword:
+
+class StaticExample {
+    public static $counter = 0;
+
+    public static function increment() {
+        self::$counter++;
+    }
+}
+
+StaticExample::increment();
+echo StaticExample::$counter; // Output: 1
+
+13. Create Multiple Traits and Use Them in a Single Class
+
+Example:
+
+trait Trait1 {
+    public function method1() {
+        echo "Trait1 Method";
+    }
+}
+
+trait Trait2 {
+    public function method2() {
+        echo "Trait2 Method";
+    }
+}
+
+class Demo {
+    use Trait1, Trait2;
+}
+
+$obj = new Demo();
+$obj->method1(); // Output: Trait1 Method
+$obj->method2(); // Output: Trait2 Method
+
+14. PHP Script for Object Iteration
+
+class Car {
+    public $make;
+    public $model;
+
+    public function __construct($make, $model) {
+        $this->make = $make;
+        $this->model = $model;
+    }
+}
+
+$cars = [new Car("Toyota", "Corolla"), new Car("Honda", "Civic")];
+
+foreach ($cars as $car) {
+    echo "Make: {$car->make}, Model: {$car->model}\n";
+}
+
+15. Use of $this Keyword
+
+    $this refers to the current instance of the class.
+
+16. Adding an Edit Link
+
+This task involves creating an edit button that opens a row in editing mode. This can be achieved using PHP, HTML, and JavaScript (AJAX) for interaction.
